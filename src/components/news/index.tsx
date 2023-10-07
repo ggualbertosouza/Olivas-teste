@@ -23,7 +23,7 @@ export const News = async () => {
               <article className="flex flex-col gap-1" key={post.id}>
                 <hr />
                 <small className="text-sm">
-                  {formatter.format(new Date(post.date))}
+                  {formatter.format(posts.date)}
                 </small>
                 <p className="bg-[#36B6C7] py-1 px-2 text-md w-fit rounded-full">
                   {post.slug?.replace(/-/g, " ")}

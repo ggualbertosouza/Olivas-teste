@@ -44,7 +44,7 @@ export const Posts = async () => {
               key={post.id}
               title={post.title}
               slug={post.slug?.replace(/-/g, " ")}
-              date={formatter.format(new Date(post.date))}
+              date={formatter.format(posts.date)}
             />
           ))}
           <Button
