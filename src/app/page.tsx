@@ -12,16 +12,16 @@ export default function Home() {
             src="/banner.png"
             alt="Banner da tela inicial - Imagem de jovens utilizando serviços da Olivas"
             fill
-            className="object-cover"
+            className="object-contain"
           />
         </div>
-          <p className="text-4xl text-[#00374E] font-bold">
-            Conteúdos <span className="text-[#36B6C7]">para você</span>
-          </p>
-          <div className="w-24 h-2 rounded-full bg-[#36B6c7]"></div>
-          <Posts />
-          <News />
-          <Cases />
+        <p className="text-4xl text-[#00374E] font-bold">
+          Conteúdos <span className="text-[#36B6C7]">para você</span>
+        </p>
+        <div className="w-24 h-2 rounded-full bg-[#36B6c7]"></div>
+        <Posts />
+        <News />
+        <Cases />
       </section>
     </>
   );
