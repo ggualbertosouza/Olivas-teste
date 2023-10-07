@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Framer-motion Imports
-import { motion, useCycle } from "framer-motion";
+import { useCycle } from "framer-motion";
 
 const navItem = [
   { page: "/pages/about", name: "Quem somos" },
@@ -29,12 +29,14 @@ export const Header = () => {
       >
         {menu ? <AiOutlineClose /> : <AiOutlineMenu />}
       </button>
-      <Link  href='/' className="relative w-64 h-16">
+      <Link href="/" className="relative w-64 h-16">
         <Image src="/logo.png" alt="Logo da Olivas Digital" fill />
       </Link>
       <nav className="flex flex-col md:flex-row gap-4 w-full md:w-fit items-center">
         <div
-          className={`flex flex-col md:flex-row items-center w-full gap-5 bg-[#9c9223] md:bg-transparent rounded-xl ${menu ? '' : 'hidden md:flex'}`}
+          className={`flex flex-col md:flex-row items-center w-full gap-5 bg-[#9c9223] md:bg-transparent rounded-xl ${
+            menu ? "" : "hidden md:flex"
+          }`}
         >
           {navItem.map((i) => (
             <Link
@@ -46,10 +48,12 @@ export const Header = () => {
             </Link>
           ))}
         </div>
-        <div className={`flex gap-4 ${menu ? '' : 'hidden md:flex'}`}>
+        <div className={`flex gap-4 ${menu ? "" : "hidden md:flex"}`}>
           <button className="flex items-center p-2 gap-1 text-white hover:bg-[#9C9223] bg-[#C6B92C] rounded-full ">
             <BiEnvelope />
-            <p className="hidden lg:inline-block text-sm whitespace-nowrap">Fale com especialistas</p>
+            <p className="hidden lg:inline-block text-sm whitespace-nowrap">
+              Fale com especialistas
+            </p>
           </button>
           <button className="hover:text-[#9C9223] text-[#C6B92C] text-2xl">
             <AiOutlineSearch />

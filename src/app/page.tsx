@@ -1,3 +1,5 @@
+import { Cases } from "@/components/cases";
+import { News } from "@/components/news";
 import { Posts } from "@/components/posts";
 import Image from "next/image";
 
@@ -18,6 +20,8 @@ export default function Home() {
           </p>
           <div className="w-24 h-2 rounded-full bg-[#36B6c7]"></div>
           <Posts />
+          <News />
+          <Cases />
       </section>
     </>
   );
