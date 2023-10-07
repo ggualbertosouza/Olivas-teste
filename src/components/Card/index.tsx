@@ -11,7 +11,7 @@ export const Card = ({description, title, link}: postProps) => {
           className="object-cover"
         />
         <h3 className="text-xl text-[#00374F] font-bold">{title}</h3>
-        <p className="text-md italic" dangerouslySetInnerHTML={{__html: description}}></p>
+        <p className="text-md italic" dangerouslySetInnerHTML={{__html: description!}}></p>
       </div>
       <a href={link} className="py-1 px-2 bg-[#F390A8] text-white rounded-full w-fit" >Saiba mais</a>
     </section>
