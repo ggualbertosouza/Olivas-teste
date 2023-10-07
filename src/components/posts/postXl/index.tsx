@@ -11,7 +11,7 @@ export const PostXl = async ({ id, slug, date, title, content }: postProps) => {
         <small className="text-[#F390A8] text-sm">{date}</small>
         <h3 className="text-[#00374F] text-xl font-bold">{title}</h3>
         <div
-          dangerouslySetInnerHTML={{ __html: content }}
+          dangerouslySetInnerHTML={{ __html: content! }}
           className="line-clamp-2 md:line-clamp-3 lg:line-clamp-6 w-4/5"
         ></div>
       </article>
