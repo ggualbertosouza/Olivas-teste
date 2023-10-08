@@ -1,4 +1,5 @@
 import { Cases } from "@/components/cases";
+import { Footer } from "@/components/footer";
 import { News } from "@/components/news";
 import { Posts } from "@/components/posts";
 import Image from "next/image";
@@ -25,6 +26,7 @@ export default function Home() {
         <Posts />
         <News />
         <Cases />
+        <Footer />
       </section>
     </>
   );

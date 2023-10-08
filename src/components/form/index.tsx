@@ -8,7 +8,7 @@ export const Form = () => {
   const { handleForm, register, handleSubmit, errors } = useSendEmail();
 
   return (
-    <>
+    <div className="">
       <form className="flex flex-col items-center justify-center gap-2 my-4">
         <div className="flex ">
           <input
@@ -30,17 +30,18 @@ export const Form = () => {
             <p className="text-sm text-red-600">{errors.email.message}</p>
           )}
         </div>
-        <p className="font-bold text-sm">
+        <p className="text-sm font-bold">
           Ao informar meus dados, eu concordo com a política de Privacidade e
           concordo em receber comunicações.
         </p>
-        <Button
+        <button
           onClick={handleSubmit(handleForm)}
           className="bg-light-pink hover:bg-dark-pink py-1 px-4 rounded-full text-white flex items-center gap-2"
-        icon={<AiOutlinePlusCircle />}
-        name="Cadastrar"
-        />
+        >
+          <AiOutlinePlusCircle />
+          Cadastrar
+        </button>
       </form>
-    </>
+    </div>
   );
 };

@@ -1,8 +1,7 @@
-import { Header } from "@/components/header";
 import "./globals.css";
+import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Fira_Sans } from "next/font/google";
-import { Footer } from "@/components/footer";
 
 const Fira = Fira_Sans({ subsets: ["latin"], weight: ["400"] });
 
@@ -24,9 +23,6 @@ export default function RootLayout({
           <Header />
         </header>
         <main className="grow">{children}</main>
-        <footer className="mt-4">
-          <Footer />
-        </footer>
       </body>
     </html>
   );

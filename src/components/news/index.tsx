@@ -10,7 +10,7 @@ import Image from "next/image";
 export const News = async () => {
   const { posts, formatter } = await GetData();
 
-  const somePosts = posts.slice(6, 10);
+  const somePosts = posts.slice(1, 5);
 
   return (
     <>
@@ -27,7 +27,7 @@ export const News = async () => {
               <small className="text-sm">
               {formatter.format(posts.date)}
               </small>
-              <h2 className="text-xl font-bold w-96 whitespace-nowrap md:whitespace-normal">
+              <h2 className="text-xl font-bold w-96 whitespace-normal">
                 {post.title}
               </h2>
             </article>
