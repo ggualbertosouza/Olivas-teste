@@ -37,15 +37,16 @@ export const News = async () => {
               style="btn-green my-4"
             />
           </section>
-          <section className="bg-white rounded-tl-[10rem] flex flex-col p-2 gap-1 text-dark-blue w-[100%] lg:w-[50%]">
-            <div className="relative h-96">
+          <section className="bg-white p-4 rounded-tl-[5rem] w-full lg:w-2/4">
+            <div className="flex flex-col items-start gap-2 ">
+              <div className="relative h-[30vh] w-[100%]">
               <Image
                 src="/news.png"
                 alt="Imagem de garota lendo a NewsLetter da Olivas Digital"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
-            </div>
+              </div>
             <article className="flex flex-col gap-1">
               <div className="flex items-end gap-2">
                 <p className="slug bg-light-pink text-white">
@@ -58,9 +59,10 @@ export const News = async () => {
               <h3 className="text-xl font-bold">{posts[1].title}</h3>
               <div
                 dangerouslySetInnerHTML={{ __html: posts[1].content! }}
-                className="text-sm overflow-hidden italic text-ellipsis h-20"
+                className="text-sm overflow-hidden italic text-ellipsis h-30 line-clamp-6"
               ></div>
             </article>
+            </div>
           </section>
         </div>
       </section>

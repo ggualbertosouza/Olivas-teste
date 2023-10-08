@@ -8,13 +8,12 @@ export const Form = () => {
   const { handleForm, register, handleSubmit, errors } = useSendEmail();
 
   return (
-    <div className="">
       <form className="flex flex-col items-center justify-center gap-2 my-4">
         <div className="flex ">
           <input
             {...register("name")}
             type="text"
-            className="outline-none border border-[#9C9223] focus:shadow-sm focus:shadow-black p-1 w-56 text-zinc-700 rounded"
+            className="outline-none border border-[#9C9223] focus:shadow-sm focus:shadow-black p-1 w-[50%] text-zinc-700 rounded"
             placeholder="Insira o seu Nome"
           />
           {errors.name && (
@@ -23,14 +22,14 @@ export const Form = () => {
           <input
             {...register("email")}
             type="text"
-            className="outline-none border border-[#9C9223] focus:shadow-sm focus:shadow-black p-1 w-56 text-zinc-700 rounded"
+            className="outline-none border border-[#9C9223] focus:shadow-sm focus:shadow-black p-1 w-[50%] text-zinc-700 rounded"
             placeholder="Insira o seu Email"
           />
           {errors.email && (
             <p className="text-sm text-red-600">{errors.email.message}</p>
           )}
         </div>
-        <p className="text-sm font-bold">
+        <p className="md:text-sm font-bold text-[12px]">
           Ao informar meus dados, eu concordo com a política de Privacidade e
           concordo em receber comunicações.
         </p>
@@ -42,6 +41,5 @@ export const Form = () => {
           Cadastrar
         </button>
       </form>
-    </div>
   );
 };

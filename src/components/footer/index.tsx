@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <section className="w-full">
       <div className="flex flex-col">
-        <div className="flex flex-col items-center gap-3 my-4">
+        <div className="flex flex-col items-center justify-center gap-3 my-4">
           <h3 className="titles">
             Receba <span className="text-light-blue">nossas novidades</span>
           </h3>
