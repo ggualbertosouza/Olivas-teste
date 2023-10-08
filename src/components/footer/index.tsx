@@ -3,7 +3,7 @@ import { Form } from "@/components/form";
 export const Footer = () => {
   return (
     <section className="flex flex-col justify-center bg-[#F0F1F5] w-full">
-      <section className="container flex  items-center justify-center">
+      <section className="flex  items-center justify-center">
         <div className="flex flex-col gap-1 items-center">
           <div className="flex flex-col items-center my-4 gap-3">
         <p className="titles ">Receba <span className="text-light-blue">nossas novidades</span></p>
