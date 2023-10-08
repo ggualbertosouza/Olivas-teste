@@ -37,7 +37,7 @@ export const News = async () => {
               style="btn-green my-4"
             />
           </section>
-          <section className="bg-white p-4 rounded-tl-[5rem] w-full lg:w-2/4">
+          <section className="bg-white p-4 rounded-tl-[5rem] overflow-hidden w-full lg:w-2/4">
             <div className="flex flex-col items-start gap-2 ">
               <div className="relative h-[30vh] w-[100%]">
               <Image
@@ -59,7 +59,7 @@ export const News = async () => {
               <h3 className="text-xl font-bold">{posts[1].title}</h3>
               <div
                 dangerouslySetInnerHTML={{ __html: posts[1].content! }}
-                className="text-sm overflow-hidden italic text-ellipsis h-30 line-clamp-6"
+                className="text-sm overflow-hidden italic text-ellipsis h-24 line-clamp-5"
               ></div>
             </article>
             </div>

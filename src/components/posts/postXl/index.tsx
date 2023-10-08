@@ -12,7 +12,7 @@ export const PostXl = async ({ id, slug, date, title, content }: postProps) => {
         <h3 className="text-dark-blue text-xl font-bold">{title}</h3>
         <div
           dangerouslySetInnerHTML={{ __html: content! }}
-          className="text-sm overflow-hidden italic text-ellipsis h-30 line-clamp-6"
+          className="text-sm overflow-hidden italic text-ellipsis h-24 line-clamp-5"
         ></div>
       </article>
     </section>
