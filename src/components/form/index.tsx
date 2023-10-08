@@ -29,7 +29,7 @@ export const Form = () => {
             <p className="text-sm text-red-600">{errors.email.message}</p>
           )}
         </div>
-        <p className="md:text-sm font-bold text-[12px]">
+        <p className="md:text-sm font-bold text-[12px] text-center">
           Ao informar meus dados, eu concordo com a política de Privacidade e
           concordo em receber comunicações.
         </p>
