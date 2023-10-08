@@ -1,26 +1,21 @@
-"use client";
 // Components | Types | Hooks imports
 import { GetData } from "@/hooks/useFetch";
 import { postProps } from "@/types";
 import { Card } from "@/components/Card";
 
-// Swiper Imposts
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Navigation } from "swiper/modules";
-
 export const Cases = async () => {
   const { posts } = await GetData();
-  const data = posts.slice(1, 4);
+  const data = posts.slice(3, 8);
 
   return (
-    <section className="flex item-center justify-center container">
-      <section className="container flex flex-col items-center gap-12">
-        <div className="flex flex-col items-center gap-2">
-          <h3 className="text-3xl text-[#00374E] font-bold">Cases</h3>
-          <div className="w-10 h-1 bg-[#36B6C7] rounded-full"></div>
+    <section className="container flex item-center justify-center ">
+      <section className="flex flex-col items-center">
+        <div className="flex flex-col items-center my-4 gap-3">
+          <h3 className="titles">Cases</h3>
+          <div className="bar w-12"></div>
         </div>
-        <div className="flex gap-12 w-fit">
+        <section className="w-[100vw]">
+        <div className="flex gap-12 my-12 overflow-hidden">
           {data.map((post: postProps) => (
             <Card
               key={post.id}
@@ -30,6 +25,7 @@ export const Cases = async () => {
             />
           ))}
         </div>
+        </section>
       </section>
     </section>
   );

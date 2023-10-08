@@ -16,9 +16,9 @@ export const Posts = async () => {
   const somePosts = posts.slice(1, 5);
 
   return (
-    <section className="container p-4">
-      <div className="flex flex-col lg:flex-row justify-center">
-        <section className="flex flex-col w-full lg:w-2/4 gap-4">
+    <section className="container flex items-center justify-center">
+      <div className="flex flex-col lg:flex-row justify-center gap-4 p-4">
+        <section className="flex flex-col gap-4 w-full lg:w-2/4">
           <div className="relative h-96">
             <Image
               src="/post-img.png"
@@ -36,8 +36,8 @@ export const Posts = async () => {
           />
         </section>
 
-        <section className="flex flex-col gap-2">
-          <h2 className="text-[#F390A8] text-3xl">Outras postagens: </h2>
+        <section className="flex flex-col gap-2 ">
+          <h2 className="text-light-pink text-3xl font-bold py-4">Outras postagens: </h2>
           <hr className="bg-zinc-600" />
           {somePosts.map((post: postProps) => (
             <PostSm
@@ -47,10 +47,7 @@ export const Posts = async () => {
               date={formatter.format(posts.date)}
             />
           ))}
-          <Button
-            name="Ver mais"
-            style="border-[#F390A8] text-[#F390A8] hover:bg-[#F390A8] hover:text-white"
-          />
+          <Button name="Ver mais" style="btn-pink" />
         </section>
       </div>
     </section>

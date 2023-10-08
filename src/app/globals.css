@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-pink {
+    @apply py-1 px-2 rounded-full border border-light-pink text-light-pink hover:bg-light-pink hover:text-white;
+  }
+  .btn-green {
+    @apply py-1 px-2 rounded-full border border-white text-white hover:bg-white hover:text-light-green;
+  }
+  .btn-yellow {
+    @apply bg-light-yellow hover:bg-dark-yellow text-white py-1 px-2 rounded-full;
+  }
+  .titles {
+    @apply font-bold text-4xl text-dark-blue
+  }
+  .bar {
+    @apply w-24 h-2 rounded-full bg-light-blue
+  }
+  .slug{
+    @apply py-1 px-2 rounded-full text-sm w-fit
+  }
+}

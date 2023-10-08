@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/button";
 import { useSendEmail } from "@/components/form/useSendEmail";
 // React Icons Impots
 import { AiOutlinePlusCircle } from "react-icons/ai";
@@ -33,13 +34,12 @@ export const Form = () => {
           Ao informar meus dados, eu concordo com a política de Privacidade e
           concordo em receber comunicações.
         </p>
-        <button
+        <Button
           onClick={handleSubmit(handleForm)}
-          className="bg-[#F390A8] hover:bg-[#E46C88] py-1 px-4 rounded-full text-white flex items-center gap-2 "
-        >
-          <AiOutlinePlusCircle />
-          Cadastrar
-        </button>
+          className="bg-light-pink hover:bg-dark-pink py-1 px-4 rounded-full text-white flex items-center gap-2"
+        icon={<AiOutlinePlusCircle />}
+        name="Cadastrar"
+        />
       </form>
     </>
   );

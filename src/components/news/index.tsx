@@ -10,33 +10,34 @@ import Image from "next/image";
 export const News = async () => {
   const { posts, formatter } = await GetData();
 
-  const somePosts = posts.slice(1, 4);
+  const somePosts = posts.slice(6, 10);
 
   return (
     <>
-      <section className="w-full bg-[#8ECB53]">
+      <section className="w-full bg-light-green py-6">
         <div className="flex flex-col lg:flex-row justify-center gap-12 p-4">
-          <section className="text-white space-y-4">
-            <h2 className="text-2xl font-bold">Principais notícias</h2>
-            <div className="w-24 bg-white rounded-full"></div>
+          <section className="text-white">
+            <h2 className="text-3xl font-bold py-4">Principais notícias</h2>
             {somePosts.map((post: postProps) => (
               <article className="flex flex-col gap-1" key={post.id}>
                 <hr />
-                <small className="text-sm">
-                  {formatter.format(posts.date)}
-                </small>
-                <p className="bg-[#36B6C7] py-1 px-2 text-md w-fit rounded-full">
-                  {post.slug?.replace(/-/g, " ")}
-                </p>
-                <h3 className="text-lg font-bold">{post.title}</h3>
-              </article>
+              <p className="bg-light-blue text-white text-sm py-1 px-2 rounded-full w-fit my-2">
+              {post.slug?.replace(/-/g, " ")}
+              </p>
+              <small className="text-sm">
+              {formatter.format(posts.date)}
+              </small>
+              <h2 className="text-xl font-bold w-96 whitespace-nowrap md:whitespace-normal">
+                {post.title}
+              </h2>
+            </article>
             ))}
             <Button
               name="Ver mais"
-              style="border-white text-white hover:bg-white hover:text-[#8ECB53]"
+              style="btn-green my-4"
             />
           </section>
-          <section className="bg-white rounded-tl-xl flex flex-col p-2 gap-1 text-[#00374F] lg:w-2/4">
+          <section className="bg-white rounded-tl-[10rem] flex flex-col p-2 gap-1 text-[#00374F] w-[100%] lg:w-[50%]">
             <div className="relative h-96 w-full">
               <Image
                 src="/news.png"
@@ -45,21 +46,23 @@ export const News = async () => {
                 className="object-contain"
               />
             </div>
+            <div className="container flex items-center justify-center">
             <article className="flex flex-col gap-1">
               <div className="flex items-end gap-2">
-                <p className="py-1 px-2 bg-[#EC7E99] text-white text-md w-fit rounded-full">
+                <p className="slug bg-light-pink text-white">
                   {posts[1].slug.replace(/-/g, " ")}
                 </p>
                 <small className="text-sm">
                   {formatter.format(new Date(posts[1].date))}
                 </small>
               </div>
-              <h3 className="text-lg font-bold">{posts[1].title}</h3>
+              <h3 className="text-dark-blue text-xl font-bold">{posts[1].title}</h3>
               <div
-                className="text-sm italic line-clamp-2 md:line-clamp-3 lg:line-clamp-5"
+                className="line-clamp-2 md:line-clamp-3 lg:line-clamp-6 overflow-hidden italic"
                 dangerouslySetInnerHTML={{ __html: posts[1].content }}
               ></div>
             </article>
+            </div>
           </section>
         </div>
       </section>
