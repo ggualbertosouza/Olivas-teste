@@ -8,13 +8,12 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col items-center gap-12">
-        <div className="relative h-[350px] w-[100vw]">
+        <div className="relative h-[350px] w-[100%]">
           <Image
             src="/banner.png"
             alt="Banner da tela inicial - Imagem de jovens utilizando serviços da Olivas"
-            quality={100}
             fill
-            className="object-cover object-center"
+            className="object-cover "
           />
         </div>
         <div className="flex flex-col items-center gap-4">
@@ -25,7 +24,6 @@ export default function Home() {
         </div>
         <Posts />
         <News />
-        <Cases />
         <Footer />
       </section>
     </>

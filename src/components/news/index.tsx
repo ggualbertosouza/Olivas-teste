@@ -10,7 +10,7 @@ import Image from "next/image";
 export const News = async () => {
   const { posts, formatter } = await GetData();
 
-  const somePosts = posts.slice(1, 5);
+  const somePosts = posts.slice(1, 4);
 
   return (
     <>
@@ -37,8 +37,8 @@ export const News = async () => {
               style="btn-green my-4"
             />
           </section>
-          <section className="bg-white rounded-tl-[10rem] flex flex-col p-2 gap-1 text-[#00374F] w-[100%] lg:w-[50%]">
-            <div className="relative h-96 w-full">
+          <section className="bg-white rounded-tl-[10rem] flex flex-col p-2 gap-1 text-dark-blue w-[100%] lg:w-[50%]">
+            <div className="relative h-96">
               <Image
                 src="/news.png"
                 alt="Imagem de garota lendo a NewsLetter da Olivas Digital"
@@ -46,7 +46,6 @@ export const News = async () => {
                 className="object-contain"
               />
             </div>
-            <div className="container flex items-center justify-center">
             <article className="flex flex-col gap-1">
               <div className="flex items-end gap-2">
                 <p className="slug bg-light-pink text-white">
@@ -56,13 +55,12 @@ export const News = async () => {
                   {formatter.format(new Date(posts[1].date))}
                 </small>
               </div>
-              <h3 className="text-dark-blue text-xl font-bold">{posts[1].title}</h3>
+              <h3 className="text-xl font-bold">{posts[1].title}</h3>
               <div
-                className="line-clamp-2 md:line-clamp-3 lg:line-clamp-6 overflow-hidden italic"
-                dangerouslySetInnerHTML={{ __html: posts[1].content }}
+                dangerouslySetInnerHTML={{ __html: posts[1].content! }}
+                className="text-sm overflow-hidden italic text-ellipsis h-20"
               ></div>
             </article>
-            </div>
           </section>
         </div>
       </section>

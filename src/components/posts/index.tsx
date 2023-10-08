@@ -27,7 +27,6 @@ export const Posts = async () => {
               className="object-contain"
             />
           </div>
-          <div className="h-auto">
           <PostXl
             title={posts[0].title}
             key={posts[0].id}
@@ -35,7 +34,6 @@ export const Posts = async () => {
             slug={posts[0].slug.replace(/-/g, " ")}
             date={formatter.format(new Date(posts[0].date))}
           />
-          </div>
         </section>
 
         <section className="flex flex-col gap-2 ">
