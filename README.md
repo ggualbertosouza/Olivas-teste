@@ -15,3 +15,11 @@
 - `Zod`
 - `React hook form`
 - `React icons`
+
+## Instalação e setup do projeto
+
+Clone esse repositório. Você precisa ter `node` and `npm` instalados globalmente na sua máquina.   
+Instalação:
+`npm install`  
+Para iniciar o servidor:
+`npm run dev`  
