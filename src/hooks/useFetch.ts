@@ -16,7 +16,8 @@ export const GetData = async () => {
             id: post.id,
             title: post.title?.rendered,
             content: post.content?.rendered,
-            description: post.excerpt?.rendered
+            description: post.excerpt?.rendered,
+            link: post.link,
         }})
         
         // Formatar a hora

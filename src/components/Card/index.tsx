@@ -2,7 +2,7 @@ import { postProps } from "@/types";
 
 export const Card = ({ description, title, link }: postProps) => {
   return (
-    <section className="flex flex-col w-[15rem] h-auto justify-between shadow-sm shadow-black p-4 hover:-translate-y-1 hover:translate-x-1 cursor-pointer">
+    <section className="flex flex-col w-[20rem] h-auto justify-between shadow-sm shadow-black p-1 hover:-translate-y-1 hover:translate-x-1 cursor-pointer">
       <div className="flex flex-col gap-2">
         <img
           src="https://www.olivas.digital/wp-content/uploads/2023/03/OD_Vantagens-de-uma-agencia-de-desenvolvimento-e-marketing-integrado-WEB-blogpost-banner-1224x512-1.png?_t=1682598414"

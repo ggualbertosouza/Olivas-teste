@@ -15,7 +15,7 @@ export const Cases = async () => {
           <h3 className="titles">Cases</h3>
           <div className="bar w-12"></div>
         </div>
-        <section className="container flex gap-12 w-[100%]">
+        <section className="container flex gap-12 ">
               {data.map((post: postProps) => (
                 <Card
                   key={post.id}
