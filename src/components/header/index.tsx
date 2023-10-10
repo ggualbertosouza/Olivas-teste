@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Framer-motion Imports
-import { useCycle } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 import { Button } from "@/components/button";
 
 const navItem = [
@@ -23,7 +23,8 @@ export const Header = () => {
   const [menu, toggleMenu] = useCycle(false, true);
 
   return (
-    <section className="container flex items-center justify-center">
+    <section 
+    className="container flex items-center justify-center">
       <div className="relative flex flex-col lg:flex-row items-center justify-between p-2 w-full">
         <button
           onClick={() => toggleMenu()}
@@ -57,14 +58,14 @@ export const Header = () => {
           </div>
         </nav>
         <div
-          className={`flex items-center gap-2 ${menu ? "" : "hidden lg:flex"}`}
+          className={`flex items-center gap-4 ${menu ? "" : "hidden lg:flex"}`}
         >
           <Button
-            style="btn-yellow flex items-center gap-1 text-sm"
+            style="btn-yellow flex items-center gap-1 text-sm hover:-translate-y-0.5 hover:translate-x-0.5"
             name="fale com especialistas"
             icon={<BiEnvelope />}
           />
-          <button className="text-light-yellow hover:text-dark-yellow text-2xl">
+          <button className="text-light-yellow hover:text-dark-yellow text-2xl border border-white hover:border-dark-yellow rounded-full p-1 hover:scale-105">
             <AiOutlineSearch />
           </button>
         </div>

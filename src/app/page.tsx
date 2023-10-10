@@ -22,14 +22,15 @@ export default function Home() {
           </p>
           <div className="bar"></div>
         </div>
-        <section className="container">
+        <section className="container flex items-center justify-center">
         <Posts />
         </section>
-        <section className="w-full bg-light-green">
-          <div className="container">
+        <section className="bg-light-green w-full">
+          <div className="container flex items-center">
         <News />
           </div>
         </section>
+        <Cases />
         <Footer />
       </section>
     </>

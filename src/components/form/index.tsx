@@ -13,7 +13,7 @@ export const Form = () => {
           <input
             {...register("name")}
             type="text"
-            className="outline-none border border-[#9C9223] focus:shadow-sm focus:shadow-black p-1 w-[50%] text-zinc-700 rounded"
+            className="outline-none border border-dark-yellow hover:shadow-sm hover:shadow-black p-1 w-[50%] text-zinc-700 rounded hover:-translate-y-0.5 hover:translate-x-0.5"
             placeholder="Insira o seu Nome"
           />
           {errors.name && (
@@ -22,7 +22,7 @@ export const Form = () => {
           <input
             {...register("email")}
             type="text"
-            className="outline-none border border-[#9C9223] focus:shadow-sm focus:shadow-black p-1 w-[50%] text-zinc-700 rounded"
+            className="outline-none border border-dark-yellow hover:shadow-sm hover:shadow-black p-1 w-[50%] text-zinc-700 rounded hover:-translate-y-0.5 hover:translate-x-0.5"
             placeholder="Insira o seu Email"
           />
           {errors.email && (

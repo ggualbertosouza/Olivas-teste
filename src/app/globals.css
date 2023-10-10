@@ -4,10 +4,10 @@
 
 @layer components {
   .btn-pink {
-    @apply py-1 px-2 rounded-full border border-light-pink text-light-pink hover:bg-light-pink hover:text-white;
+    @apply py-1 px-2 rounded-full border border-light-pink text-light-pink hover:bg-light-pink hover:text-white hover:shadow-sm hover:shadow-black hover:-translate-y-0.5 hover:translate-x-0.5;
   }
   .btn-green {
-    @apply py-1 px-2 rounded-full border border-white text-white hover:bg-white hover:text-light-green;
+    @apply py-1 px-2 rounded-full border border-white text-white hover:bg-white hover:text-light-green hover:shadow-sm hover:shadow-white hover:-translate-y-0.5 hover:translate-x-0.5;
   }
   .btn-yellow {
     @apply bg-light-yellow hover:bg-dark-yellow text-white py-1 px-2 rounded-full;
