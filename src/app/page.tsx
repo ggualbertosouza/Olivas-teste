@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <section className="flex flex-col items-center w-[100vw] overflow-hidden">
+      <section className="flex flex-col items-center w-[100%] overflow-hidden">
         <div className="relative h-[30vh] w-[100%]">
           <Image
             src="/banner.png"
@@ -23,11 +23,11 @@ export default function Home() {
           <div className="bar"></div>
         </div>
         <section className="container flex items-center justify-center">
-        <Posts />
+          <Posts />
         </section>
         <section className="bg-light-green w-full">
           <div className="flex items-center">
-        <News />
+            <News />
           </div>
         </section>
         <Cases />
