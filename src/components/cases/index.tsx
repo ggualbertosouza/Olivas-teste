@@ -1,21 +1,12 @@
-"use client";
 // Components | Types | Hooks imports
 import { GetData } from "@/hooks/useFetch";
 import { postProps } from "@/types";
 import { Card } from "@/components/Card";
 
+
 export const Cases = async () => {
   const { posts } = await GetData();
   const data = posts.slice(3, 7);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    arrows: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   return (
     <section className="container flex item-center justify-center">
@@ -25,16 +16,16 @@ export const Cases = async () => {
           <div className="bar w-12"></div>
         </div>
         <section className="container flex gap-12 w-[100%]">
-          {data.map((post: postProps) => (
-            <Card
-              key={post.id}
-              description={post.description}
-              title={post.title}
-              link={post.link}
-            />
-          ))}
+              {data.map((post: postProps) => (
+                <Card
+                  key={post.id}
+                  description={post.description}
+                  title={post.title}
+                  link={post.link}
+                />
+              ))}
         </section>
       </section>
     </section>
-  );
+    );
 };

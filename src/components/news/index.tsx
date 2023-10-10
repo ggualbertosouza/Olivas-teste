@@ -37,7 +37,7 @@ export const News = async () => {
               style="btn-green my-4"
             />
           </section>
-          <section className="bg-white p-4 rounded-tl-[5rem] overflow-hidden w-full lg:w-2/4">
+          <section className="bg-white p-4 rounded-tl-[5rem] overflow-hidden w-full lg:w-2/5">
             <div className="flex flex-col items-start gap-2 ">
               <div className="relative h-[30vh] w-[100%]">
               <Image

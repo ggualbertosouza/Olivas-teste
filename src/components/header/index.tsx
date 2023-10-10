@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Framer-motion Imports
-import { motion, useCycle } from "framer-motion";
+import { useCycle } from "framer-motion";
 import { Button } from "@/components/button";
 
 const navItem = [
@@ -23,8 +23,7 @@ export const Header = () => {
   const [menu, toggleMenu] = useCycle(false, true);
 
   return (
-    <section 
-    className="container flex items-center justify-center">
+    <section className="container flex items-center justify-center">
       <div className="relative flex flex-col lg:flex-row items-center justify-between p-2 w-full">
         <button
           onClick={() => toggleMenu()}
